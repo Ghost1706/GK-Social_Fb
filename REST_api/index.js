@@ -23,6 +23,10 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 
-app.listen(8800, () => {
+app.get("/api/auth/login", (req, res) => {
+  res.send("connected to postman login");
+});
+
+app.listen(8450, () => {
   console.log("Backend server is running!");
 });
